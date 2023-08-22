@@ -1,0 +1,49 @@
+create database travel;
+
+use travel;
+
+create table register(name varchar(100), email varchar(100), mobilenumber varchar(100), address varchar(100),
+destination varchar(100));
+
+insert into register value('Pras','pras@gmail.com','123456578','Madurai','Mumbai');
+
+select * from register;
+
+create table book(
+whereto varchar(100),
+ howmany varchar(100),
+ fromdate DATE ,
+todate DATE ,
+enteryourdetails varchar(100));
+
+
+insert into book value('chennai','ten days','2023-06-19','2023-07-19','vacation');
+
+select * from book;
+
+
+create table dialog(name varchar(200),email varchar(200),text varchar(200));
+
+insert into dialog value('pras','pras@gmail.com','Helloo');
+
+select * from dialog;
+
+
+use travel;
+
+create table exclusive(id int primary key auto_increment not null, 
+image varchar(500), text varchar(500));
+
+insert into exclusive(id, image, text) values
+('1', 
+'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlbm5haXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
+ 'Chennai');
+ 
+ insert into exclusive(image, text) values
+('https://images.unsplash.com/photo-1543832923-44667a44c804?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8RW5nbGFuZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60', 'England'),
+('https://images.unsplash.com/photo-1476990789491-712b869b91a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2NvdGxhbmR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60', 'Scotland');
+
+
+
+
+select * from exclusive;
